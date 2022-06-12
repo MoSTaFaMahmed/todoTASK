@@ -75,5 +75,8 @@ function startData(data) {
         </tr>`
     })
 }
-
+function logout (){
+     window.location.href = "../login/login.html"
+ }
+ 
 
