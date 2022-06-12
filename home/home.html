@@ -11,7 +11,7 @@
 </head>
 
 <body>
-        
+   
     <div class="container-xxl">
         <table class="table">
             <thead>
@@ -26,7 +26,60 @@
 
             </tbody>
         </table>
-      
+        <div class="d-grid">
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                Add Todo
+            </button>
+        </div>
+        <!-- <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault" onclick="handleSwitch"> -->
+
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">Add New Todo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form onsubmit="handleAdd(event)">
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="title" class="form-label">title</label>
+                                <input type="text" class="form-control" id="add-title" aria-describedby="emailHelp">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Add</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="editModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+            aria-labelledby="editModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="editModalLabel">Edit Todo</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <form onsubmit="handleEdit(event)">
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <label for="title" class="form-label">title</label>
+                                <input type="text" class="form-control" id="edit-title" aria-describedby="emailHelp">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save Changes</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
 
     </div>
 
